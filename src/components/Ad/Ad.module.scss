@@ -1,0 +1,43 @@
+@use '../../sass//utils/functions' as fn;
+@use '../../sass/global/colors' as color;
+@import '../../sass/utils/mixins';
+@import '../../sass/utils/breakpoints';
+
+.ad_container {
+  max-width: 80vw;
+  margin: 10rem auto;
+  @include flex_justifyBetween;
+  flex-wrap: wrap;
+
+  img {
+    border-radius: 0.5rem;
+  }
+
+  .ad_details {
+    @include flex_centered;
+    flex: 0.75;
+    align-items: flex-start;
+    flex-direction: column;
+
+    h2 {
+      font-weight: 700;
+      font-size: fn.rem(40);
+      line-height: fn.rem(44);
+      letter-spacing: 1.42857px;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+
+      span {
+        color: color.$orange;
+      }
+    }
+
+    p {
+      font-weight: 500;
+      font-size: fn.rem(15);
+      line-height: fn.rem(25);
+      color: color.$grey;
+      mix-blend-mode: normal;
+    }
+  }
+}

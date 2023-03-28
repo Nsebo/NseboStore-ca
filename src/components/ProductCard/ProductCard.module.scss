@@ -1,0 +1,93 @@
+@use '../../sass//utils/functions' as fn;
+@use '../../sass/global/colors' as color;
+@import '../../sass/utils/mixins';
+@import '../../sass/utils/breakpoints';
+
+.productCard_container {
+  @include flex_centered;
+  flex-direction: column;
+  position: relative;
+  width: 16rem;
+  padding-bottom: 2rem;
+  box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+
+  img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+  }
+
+  .star {
+    position: absolute;
+    right: -1.5rem;
+    top: -1.6rem;
+    .star_twelve {
+      background-color: color.$light-orange;
+      width: fn.rem(60);
+      height: fn.rem(60);
+      position: relative;
+      text-align: center;
+      z-index: 1;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: fn.rem(60);
+        width: fn.rem(60);
+        background-color: color.$light-orange;
+      }
+
+      &::before {
+        transform: rotate(30deg);
+      }
+
+      &::after {
+        transform: rotate(60deg);
+      }
+
+      p {
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: color.$white;
+        z-index: 10;
+        position: absolute;
+        top: 1rem;
+      }
+    }
+  }
+
+  .productCard_details {
+    padding: 0 1rem;
+    h3 {
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 1rem 0 0.6rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: color.$grey;
+      text-align: center;
+    }
+
+    .price {
+      margin: 1rem 0 2rem;
+      h5 {
+        color: color.$orange;
+        margin-bottom: 0.2rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+        text-decoration: line-through;
+        text-align: left;
+      }
+    }
+  }
+}

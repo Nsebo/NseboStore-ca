@@ -1,0 +1,99 @@
+@use '../../sass//utils/functions' as fn;
+@use '../../sass/global/colors' as color;
+@import '../../sass/utils/mixins';
+@import '../../sass/utils/breakpoints';
+
+.productDetail_container {
+  max-width: 80vw;
+  margin: 2.5rem auto;
+  h5 {
+    margin-bottom: 3rem;
+    cursor: pointer;
+    color: color.$light-orange;
+  }
+
+  .top {
+    @include flex_justifyBetween;
+    align-items: center;
+    gap: 5rem;
+  }
+  img {
+    width: fn.rem(550);
+    height: fn.rem(700);
+    object-fit: contain;
+  }
+
+  .details {
+    flex-direction: column;
+
+    small {
+      padding: 0.5rem 1rem;
+      background-color: color.$orange;
+      color: color.$white;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 3rem;
+      margin: 1rem 0 0.5rem;
+    }
+
+    p {
+      color: color.$grey;
+      margin-bottom: 3rem;
+    }
+
+    h4 {
+      color: color.$orange;
+      letter-spacing: 1.5px;
+    }
+
+    h5 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .pricing {
+    @include flex_align;
+    gap: 3rem;
+    margin-top: 3rem;
+
+    .control {
+      @include flex_align;
+      gap: 1.5rem;
+      background-color: color.$light-grey;
+      padding: 1rem 1.5rem;
+
+      button {
+        background-color: transparent;
+        border: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+        padding: 0 0.3rem;
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .review {
+    margin-top: 4rem;
+    p {
+      margin: 0.2rem 0;
+    }
+    .profile {
+      @include flex_align;
+      gap: 1rem;
+      img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+      }
+    }
+  }
+}

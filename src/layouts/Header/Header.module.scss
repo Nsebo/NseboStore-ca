@@ -1,0 +1,58 @@
+@use '../../sass//utils/functions' as fn;
+@use '../../sass/global/colors' as color;
+@import '../../sass/utils/mixins';
+@import '../../sass/utils/breakpoints';
+
+.header_container {
+  @include flex_justifyBetween;
+  background-color: color.$dark;
+  padding: fn.rem(32) fn.rem(166);
+  border-bottom: 1.5px solid color.$lighter-dark;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  p {
+    font-weight: 700;
+    font-size: fn.rem(32);
+    color: color.$light-orange;
+  }
+
+  nav {
+    @include flex_centered;
+    ul {
+      @include flex_centered;
+      gap: 2rem;
+      list-style: none;
+
+      li {
+        a {
+          text-transform: uppercase;
+          text-decoration: none;
+          color: color.$white;
+          font-size: 0.85rem;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: color.$orange;
+          }
+        }
+      }
+    }
+  }
+
+  .cart {
+    @include flex_align;
+    position: relative;
+    small {
+      position: absolute;
+      padding: 0.25rem 0.5rem;
+      background-color: color.$white;
+      color: color.$orange;
+      font-weight: 700;
+      border-radius: 50%;
+      top: -0.5rem;
+      right: -1rem;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@use '../../sass//utils/functions' as fn;
+@use '../../sass/global/colors' as color;
+@import '../../sass/utils/mixins';
+@import '../../sass/utils/breakpoints';
+
+.homeCard_container {
+  max-width: 80vw;
+  margin: 3rem auto;
+  @include flex_centered;
+  flex-direction: column;
+
+  h2 {
+    font-size: fn.rem(56);
+    color: color.$orange;
+    margin: 3rem 0;
+  }
+
+  .cards {
+    @include flex_centered;
+    flex-wrap: wrap;
+    gap: fn.rem(30);
+
+    .card {
+      @include flex_centered;
+      width: fn.rem(350);
+      height: fn.rem(206);
+      background-color: color.$light-grey;
+      border-radius: fn.rem(8);
+      flex-direction: column;
+      margin-top: 7rem;
+
+      h3 {
+        font-weight: 700;
+        font-size: fn.rem(18);
+        line-height: fn.rem(25);
+        text-align: center;
+        letter-spacing: 1.28571px;
+        text-transform: uppercase;
+        margin-bottom: fn.rem(15);
+      }
+
+      img {
+        transform: translateY(-2.5rem);
+      }
+
+      a {
+        @include flex_align;
+        flex-direction: row-reverse;
+        gap: 1rem;
+        text-decoration: none;
+        margin-bottom: 4rem;
+        font-weight: 700;
+        font-size: fn.rem(13);
+        line-height: fn.rem(18);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: color.$grey;
+        mix-blend-mode: normal;
+
+        img {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}

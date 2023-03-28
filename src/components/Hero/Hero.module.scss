@@ -1,0 +1,50 @@
+@use '../../sass//utils/functions' as fn;
+@use '../../sass/global/colors' as color;
+@import '../../sass/utils/mixins';
+@import '../../sass/utils/breakpoints';
+
+.hero_container {
+  @include flex_justifyBetween;
+  background-color: color.$dark;
+  padding: fn.rem(5) fn.rem(166);
+
+  .hero_details {
+    // @include flex_centered;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+
+    h5 {
+      font-weight: 400;
+      font-size: fn.rem(14);
+      line-height: fn.rem(19);
+      letter-spacing: fn.rem(10);
+      text-transform: uppercase;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+      color: color.$white;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: fn.rem(56);
+      line-height: fn.rem(58);
+      letter-spacing: fn.rem(2);
+      margin: fn.rem(24) 0;
+      color: color.$white;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: fn.rem(15);
+      line-height: fn.rem(25);
+      color: color.$white;
+      mix-blend-mode: normal;
+      opacity: 0.75;
+      width: 60%;
+      margin-bottom: fn.rem(40);
+    }
+  }
+}

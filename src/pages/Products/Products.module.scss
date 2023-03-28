@@ -1,0 +1,52 @@
+@use '../../sass//utils/functions' as fn;
+@use '../../sass/global/colors' as color;
+@import '../../sass/utils/mixins';
+@import '../../sass/utils/breakpoints';
+
+.products_container {
+  max-width: 85vw;
+  margin: 3rem auto;
+
+  .tags {
+    margin-bottom: 3rem;
+    h2 {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    ul {
+      @include flex_centered;
+      flex-wrap: wrap;
+      gap: 2rem;
+      list-style: none;
+      margin-bottom: 3rem;
+    }
+
+    form {
+      margin-bottom: 4rem;
+      @include flex_centered;
+      label {
+        width: 50%;
+        input {
+          border: 1.5px solid color.$orange;
+          padding: 0.8rem 1.4rem;
+          width: 100%;
+          border-radius: 0.5rem;
+          font-family: inherit;
+          font-weight: bold;
+          font-size: 1.1rem;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  .products_card {
+    // margin-top: 5rem;
+    @include flex_centered;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+}

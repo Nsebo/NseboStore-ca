@@ -1,0 +1,42 @@
+@use '../../sass//utils/functions' as fn;
+@use '../../sass/global/colors' as color;
+@import '../../sass/utils/mixins';
+@import '../../sass/utils/breakpoints';
+
+.checkout_container {
+  //   min-height: 40vh;
+  .checkout_list {
+    @include flex_justifyBetween;
+    align-items: center;
+    max-width: 80vw;
+    margin: 3rem auto 1rem;
+    text-align: left;
+
+    img {
+      width: 5rem;
+      height: 7rem;
+      object-fit: cover;
+    }
+
+    .control {
+      @include flex_align;
+      gap: 1.5rem;
+      background-color: color.$light-grey;
+      padding: 1rem 1.5rem;
+
+      button {
+        background-color: transparent;
+        border: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+        padding: 0 0.3rem;
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
