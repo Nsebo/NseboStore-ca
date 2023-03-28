@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className={styles.footer_container}>
       <div className={styles.wrapper}>
         <div className={styles.top}>
-          <h2>Nina-Store</h2>
+          <h2>Nsebo-Store</h2>
           <div className={styles.footer_nav}>
             <Link>Home</Link>
             <Link>Products</Link>

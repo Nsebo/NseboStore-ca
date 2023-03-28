@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header className={styles.header_container}>
-      <p>Nina-Store</p>
+      <p>Nsebo-Store</p>
       <nav>
         <ul>
           <li>
