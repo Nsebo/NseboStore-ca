@@ -15,7 +15,6 @@ export const ProductProvider = ({ children }) => {
                 setSearchProduct(response.data);
             })
             .catch((error) => {
-                console.error(error);
             });
     }, []);
     return (

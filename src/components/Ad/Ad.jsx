@@ -9,12 +9,12 @@ const Ad = () => {
           Bringing you the <span>best</span> products
         </h2>
         <p>
-          Located at the heart of Norway, Nina-store is the premier store for
+          Located at the heart of Norway, Nsebo-store is the premier store for
           headphones, beauty products, shoes, perfumes, earphones, speakers,
           computers and audio accessories. We have a large showroom and luxury
           demonstration rooms available for you to browse and experience a wide
           range of our products. Stop by our store to meet some of the fantastic
-          people who make Nina-store the best place to buy your products from.
+          people who make Nsebo-store the best place to buy your products from.
         </p>
       </div>
       <img src={man} alt='man' />

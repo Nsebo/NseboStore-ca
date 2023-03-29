@@ -5,7 +5,7 @@ import './index.scss';
 import { BrowserRouter } from 'react-router-dom';
 import { ProductProvider } from './api/productApi.jsx';
 import { TagProvider } from './api/tagApi.jsx';
-// import { CartProvider } from './utils/cart-context';
+
 
 import { CartProvider } from './utils/text-context';
 import { ShoppingCartProvider } from './utils/cart-context';
