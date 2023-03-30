@@ -15,11 +15,8 @@ const Products = () => {
     const filteredProducts = products.filter((product) => {
       return product.title.toLowerCase().includes(e.target.value.toLowerCase());
     });
-    console.log(filteredProducts);
     setSearchProduct(filteredProducts);
   };
-
-  console.log(searchProduct);
 
   return (
     <div className={styles.products_container}>
@@ -35,10 +32,10 @@ const Products = () => {
             e.preventDefault();
           }}
         >
-          <label htmlFor='search'>
+          <label htmlFor="search">
             <input
-              type='text'
-              placeholder='Search for a product...'
+              type="text"
+              placeholder="Search for a product..."
               onChange={onSearchHandler}
             />
           </label>

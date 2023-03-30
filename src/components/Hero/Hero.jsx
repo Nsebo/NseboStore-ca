@@ -1,6 +1,6 @@
 import Button from '../../layouts/Button/Button';
 import styles from './Hero.module.scss';
-import headphones from '../../../../../react-ca-nsebo/NseboStore-ca/src/assets/headphones.png';
+import headphones from '../../assets/headphones.png';
 
 const Hero = () => {
   return (
@@ -12,10 +12,15 @@ const Hero = () => {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <Button btnText='View Product' orange={true} />
+        <Button
+          to={true}
+          product="/products"
+          btnText="View Product"
+          orange={true}
+        />
       </div>
       <div className={styles.hero_img}>
-        <img src={headphones} alt='headphones' />
+        <img src={headphones} alt="headphones" />
       </div>
     </section>
   );

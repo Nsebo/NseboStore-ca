@@ -13,7 +13,7 @@ const Contact = () => {
     },
 
   });
-  
+
   ValidationSchema: Yup.object({
     name: Yup.string()
       .max(20, 'Name must be at least 20 characters')

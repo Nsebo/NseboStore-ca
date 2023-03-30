@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import styles from './Product.module.scss';
 import Button from '../../layouts/Button/Button';
-import profile from '../../../../../react-ca-nsebo/NseboStore-ca/src/assets/blank.webp';
+import profile from '../../assets/blank.webp';
 import { useShoppingCart } from '../../utils/cart-context';
 
 const Product = () => {
@@ -73,9 +73,9 @@ const Product = () => {
                   <button onClick={() => increaseCartQuantity(id)}>+</button>
                 </div>
               )}
-              <div className='' onClick={() => increaseCartQuantity(id)}>
-                <Button btnText='ADD TO CART' orange={true} to={false} />
-              </div>
+              <button className="" onClick={() => increaseCartQuantity(id)}>
+                <Button btnText="ADD TO CART" orange={true} to={false} />
+              </button>
             </div>
             {reviews &&
               reviews.map((review) => {
@@ -83,7 +83,7 @@ const Product = () => {
                   <div className={styles.review} key={review.id}>
                     <div className={styles.profile}>
                       <img src={profile} alt={review.id} />
-                      <div className=''>
+                      <div className="">
                         <h4>{review.username}</h4>
                         <p>Costumer</p>
                         <p>
