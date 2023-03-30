@@ -5,16 +5,15 @@ import * as Yup from 'yup';
 // import Button from '../../layouts/Buttons/Button';
 
 const Contact = () => {
-  //form states
   const formik = useFormik({
     initialValues: {
       name: '',
       email: '',
       message: '',
     },
-  });
 
-  //form validation
+  });
+  
   ValidationSchema: Yup.object({
     name: Yup.string()
       .max(20, 'Name must be at least 20 characters')
@@ -31,14 +30,10 @@ const Contact = () => {
         <h2>Get in touch</h2>
         <div className={styles.text}>
           <p>
-            I’d love to hear about what you’re working on and how I could help.
-            I’m currently looking for a new role and am open to a wide range of
-            opportunities. My preference would be to find a position in a
-            company in London. But I’m also happy to hear about opportunites
-            that don’t fit that description. I’m a hard-working and positive
-            person who will always approach each task with a sense of purpose
-            and attention to detail. Please do feel free to check out my online
-            profiles below and get in touch using the form.
+            Proin volutpat consequat porttitor cras nullam gravida at.
+            Orci molestie a eu arcu.
+            Sed ut tincidunt integer elementum id sem.
+            Arcu sed malesuada et magna.
           </p>
           <ul>
             <Link>
@@ -69,49 +64,58 @@ const Contact = () => {
         </div>
       </div>
       <div className={styles.contact_form}>
-        <h2>Contact Me</h2>
+        <h2>Contact Us</h2>
         <form onSubmit={formik.handleSubmit}>
           <div className={styles.fields}>
             <label htmlFor='name'>
               Name
-              <input
-                type='text'
-                name='name'
-                className={styles.name}
-                placeholder='Name'
-                value={formik.values.name}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                autoComplete='off'
-              />
+              <div>
+                <input
+                    type='text'
+                    name='name'
+                    id='name'
+                    className={styles.name}
+                    placeholder='Name'
+                    value={formik.values.name}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                />
+              </div>
+
             </label>
             <label htmlFor='email'>
               {' '}
               Email
-              <input
-                type='email'
-                name='email'
-                className={styles.name}
-                placeholder='Email'
-                value={formik.values.email}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                autoComplete='off'
-              />
+              <div>
+                <input
+                    type='email'
+                    name='email'
+                    id='email'
+                    className={styles.name}
+                    placeholder='Email'
+                    value={formik.values.email}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                />
+              </div>
+
             </label>
             <label htmlFor='message'>
               {' '}
               Message
-              <input
-                type='text'
-                name='message'
-                className={styles.name}
-                placeholder='Message'
-                value={formik.values.message}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                autoComplete='off'
-              />
+              <div>
+                <input
+                    type='text'
+                    name='message'
+                    id='message'
+                    className={styles.name}
+                    placeholder='Message'
+                    value={formik.values.message}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                />
+              </div>
+
             </label>
           </div>
           <div className={styles.send}>
