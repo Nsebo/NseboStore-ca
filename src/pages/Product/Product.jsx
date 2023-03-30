@@ -73,9 +73,9 @@ const Product = () => {
                   <button onClick={() => increaseCartQuantity(id)}>+</button>
                 </div>
               )}
-              <button className="" onClick={() => increaseCartQuantity(id)}>
+              <div className="" onClick={() => increaseCartQuantity(id)}>
                 <Button btnText="ADD TO CART" orange={true} to={false} />
-              </button>
+              </div>
             </div>
             {reviews &&
               reviews.map((review) => {
