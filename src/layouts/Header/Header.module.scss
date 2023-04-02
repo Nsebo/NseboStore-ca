@@ -6,11 +6,17 @@
 .header_container {
   @include flex_justifyBetween;
   background-color: color.$dark;
+  // background-color: white;
   padding: fn.rem(32) fn.rem(166);
   border-bottom: 1.5px solid color.$lighter-dark;
   position: sticky;
   top: 0;
   z-index: 10;
+  @media (max-width: 770px) {
+    & {
+      padding: fn.rem(32) fn.rem(32);
+    }
+  }
 
   p {
     font-weight: 700;
@@ -20,6 +26,13 @@
 
   nav {
     @include flex_centered;
+
+    @media (max-width: 770px) {
+      & {
+        display: none;
+      }
+    }
+
     ul {
       @include flex_centered;
       gap: 2rem;
@@ -41,9 +54,58 @@
     }
   }
 
+  .mobile_nav {
+    display: none;
+    position: relative;
+
+    @media (max-width: 770px) {
+      & {
+        display: flex;
+      }
+    }
+
+    .icon {
+      color: white;
+      font-size: 2rem;
+    }
+
+    nav {
+      background-color: color.$light-orange;
+      position: absolute;
+      padding: 3rem;
+      right: 0;
+      top: 4rem;
+      @include flex;
+      flex-direction: column;
+
+      ul {
+        width: 10rem;
+        height: 10rem;
+        // padding: rem;
+        @include flex_centered;
+        flex-direction: column;
+      }
+
+      .cart {
+        @media (max-width: 770px) {
+          & {
+            display: flex;
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+  }
+
   .cart {
     @include flex_align;
     position: relative;
+    @media (max-width: 770px) {
+      & {
+        display: none;
+      }
+    }
+
     small {
       position: absolute;
       padding: 0.25rem 0.5rem;

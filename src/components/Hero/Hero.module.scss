@@ -7,6 +7,12 @@
   @include flex_justifyBetween;
   background-color: color.$dark;
   padding: fn.rem(5) fn.rem(166);
+  @media (max-width: 770px) {
+    & {
+      padding: fn.rem(32) fn.rem(32);
+      flex-direction: column;
+    }
+  }
 
   .hero_details {
     // @include flex_centered;
@@ -15,6 +21,12 @@
     justify-content: center;
     flex-direction: column;
     text-align: left;
+    @media (max-width: 770px) {
+      & {
+        align-items: center;
+        text-align: center;
+      }
+    }
 
     h5 {
       font-weight: 400;
@@ -25,6 +37,11 @@
       mix-blend-mode: normal;
       opacity: 0.5;
       color: color.$white;
+      @media (max-width: 770px) {
+        & {
+          text-align: center;
+        }
+      }
     }
 
     h1 {
@@ -34,6 +51,11 @@
       letter-spacing: fn.rem(2);
       margin: fn.rem(24) 0;
       color: color.$white;
+      @media (max-width: 770px) {
+        & {
+          font-size: fn.rem(46);
+        }
+      }
     }
 
     p {
@@ -45,6 +67,12 @@
       opacity: 0.75;
       width: 60%;
       margin-bottom: fn.rem(40);
+      @media (max-width: 770px) {
+        & {
+          width: 100%;
+          text-align: center;
+        }
+      }
     }
   }
 }

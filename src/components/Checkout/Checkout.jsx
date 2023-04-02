@@ -18,21 +18,21 @@ const Checkout = ({ id, quantity }) => {
   console.log(cartItems.length);
 
   return quantity < 1 ? (
-    <h1>No Item in Cart Kindly Add Some Items</h1>
+      <h1>No Item in Cart Kindly Add Some Items</h1>
   ) : (
-    <section className={styles.checkout_container}>
-      <div className={styles.checkout_list}>
-        <img src={item?.imageUrl} alt={item?.title} />
-        <h2>{item?.title}</h2>
-        <h4>${(item?.discountedPrice * quantity).toFixed(2)}</h4>
-        <div className={styles.control}>
-          <button onClick={() => decreaseCartQuantity(id)}>-</button>
-          <span>{quantity}</span>
-          <button onClick={() => increaseCartQuantity(id)}>+</button>
+      <section className={styles.checkout_container}>
+        <div className={styles.checkout_list}>
+          <img src={item?.imageUrl} alt={item?.title} />
+          <h2>{item?.title}</h2>
+          <h4>${(item?.discountedPrice * quantity).toFixed(2)}</h4>
+          <div className={styles.control}>
+            <button onClick={() => decreaseCartQuantity(id)}>-</button>
+            <span>{quantity}</span>
+            <button onClick={() => increaseCartQuantity(id)}>+</button>
+          </div>
+          <p onClick={() => removeFromCart(item.id)}>&times;</p>
         </div>
-        <p onClick={() => removeFromCart(item.id)}>&times;</p>
-      </div>
-    </section>
+      </section>
   );
 };
 

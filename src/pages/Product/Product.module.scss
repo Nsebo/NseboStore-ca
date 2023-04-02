@@ -16,6 +16,17 @@
     @include flex_justifyBetween;
     align-items: center;
     gap: 5rem;
+    @media (max-width: 1090px) {
+      & {
+        flex-wrap: wrap;
+      }
+    }
+    @media (max-width: 770px) {
+      & {
+        gap: 1rem;
+        flex-direction: column;
+      }
+    }
   }
   img {
     width: fn.rem(550);
@@ -64,6 +75,11 @@
       gap: 1.5rem;
       background-color: color.$light-grey;
       padding: 1rem 1.5rem;
+      @media (max-width: 770px) {
+        & {
+          padding: 0.5rem 1rem;
+        }
+      }
 
       button {
         background-color: transparent;
@@ -77,6 +93,24 @@
         font-weight: 500;
         font-size: 1.1rem;
         cursor: pointer;
+      }
+    }
+
+    .button {
+      border: none;
+      padding: fn.rem(15) fn.rem(30);
+      font-size: 1rem;
+      font-family: inherit;
+      cursor: pointer;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: color.$light-orange;
+      color: color.$white;
+      @media (max-width: 770px) {
+        & {
+          padding: fn.rem(10) fn.rem(20);
+          font-size: 0.7rem;
+        }
       }
     }
   }

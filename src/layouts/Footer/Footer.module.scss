@@ -17,6 +17,12 @@
     .top,
     .bottom {
       @include flex_justifyBetween;
+      @media (max-width: 770px) {
+        & {
+          @include flex_centered;
+          flex-direction: column;
+        }
+      }
     }
 
     .top {
@@ -24,6 +30,11 @@
       .footer_nav {
         @include flex_align;
         gap: fn.rem(34);
+        @media (max-width: 770px) {
+          & {
+            margin-top: 2rem;
+          }
+        }
         a {
           font-weight: 700;
           font-size: fn.rem(13);
@@ -33,6 +44,11 @@
           color: color.$white;
           text-decoration: none;
           transition: all 0.3s ease;
+          @media (max-width: 400px) {
+            & {
+              font-size: fn.rem(10);
+            }
+          }
 
           &:hover {
             color: color.$orange;
@@ -49,6 +65,11 @@
         flex: 0.49;
         gap: fn.rem(56);
         flex-direction: column;
+        @media (max-width: 770px) {
+          & {
+            text-align: center;
+          }
+        }
         p {
           font-weight: 500;
           font-size: fn.rem(15);
@@ -60,6 +81,11 @@
       .social_icons {
         @include flex_align;
         gap: 1rem;
+        @media (max-width: 770px) {
+          & {
+            margin-top: 2rem;
+          }
+        }
 
         svg {
           fill: color.$white;
