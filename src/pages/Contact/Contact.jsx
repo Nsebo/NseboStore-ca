@@ -24,10 +24,10 @@ const Contact = () => {
           .required('Psst!... Your Full Name looks pretty here'),
       subject: Yup.string()
           .min(3, 'Subject must be 3 characters or more.')
-          .required('Hey! Here... Your Subject is missing'),
+          .required('Hey! Here... Subject is missing'),
       email: Yup.string()
           .email('Invalid email address')
-          .required('sshhh... kindly enter Your Email'),
+          .required('sshhh... kindly enter Your Email, thank you :)'),
       message: Yup.string().required('You forgot the message box innit?'),
     }),
   });
