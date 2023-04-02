@@ -21,13 +21,13 @@ const Contact = () => {
     validationSchema: Yup.object({
       fullName: Yup.string()
           .min(3, 'Name must be 3 characters or more.')
-          .required('Psst!... Your Full Name'),
+          .required('Psst!... Your Full Name looks pretty here'),
       subject: Yup.string()
           .min(3, 'Subject must be 3 characters or more.')
-          .required('Hey! Here... Your Subject Name'),
+          .required('Hey! Here... Your Subject is missing'),
       email: Yup.string()
           .email('Invalid email address')
-          .required('sshhh... Your Email'),
+          .required('sshhh... kindly enter Your Email'),
       message: Yup.string().required('You forgot the message box innit?'),
     }),
   });
